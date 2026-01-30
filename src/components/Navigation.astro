@@ -2,8 +2,8 @@
 import "../styles/global.css";
 ---
 
-<header>
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+<header class="sticky top-0 z-10 bg-white">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
     <a href="#" class="font-rubik -m-1.5 p-1.5 text-2xl lowercase">raoulwo</a>
     <div class="flex md:hidden">
       <button
@@ -30,8 +30,9 @@ import "../styles/global.css";
     </div>
     <div class="hidden md:flex md:gap-x-8">
       <a href="#" class="font-semibold hover:underline">About</a>
-      <a href="#" class="font-semibold hover:underline">Blog</a>
-      <a href="#" class="font-semibold hover:underline">Projects</a>
+      <a href="#" class="font-semibold hover:underline">Contact</a>
+      <a href="#" class="font-semibold hover:underline">Resume</a>
+      <a href="#" class="font-semibold hover:underline">Work</a>
     </div>
   </nav>
   <el-dialog>
@@ -77,12 +78,17 @@ import "../styles/global.css";
                 <a
                   href="#"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-neutral-100"
-                  >Blog</a
+                  >Contact</a
                 >
                 <a
                   href="#"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-neutral-100"
-                  >Projects</a
+                  >Resume</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-neutral-100"
+                  >Work</a
                 >
               </div>
             </div>
