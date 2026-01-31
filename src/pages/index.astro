@@ -5,113 +5,376 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
   <div class="bg-white">
-    <div class="mx-auto flex max-w-6xl justify-center px-6 lg:px-12">
+    <div class="mx-auto flex max-w-6xl justify-center px-6 sm:px-12">
       <div
         class="flex flex-col items-center gap-12 py-12 lg:flex-row-reverse lg:justify-evenly lg:py-24"
       >
         <img
           src="cropped_image.png"
           alt="A picture of myself"
-          class="mx-auto max-w-xs lg:mx-0 lg:mb-0 lg:max-w-md"
+          class="mx-auto h-auto w-full max-w-xs lg:mx-0 lg:mb-0 lg:max-w-md"
         />
         <h1
           class="font-rubik text-center text-5xl font-semibold sm:text-6xl lg:text-left"
         >
-          <span class="text-emerald-500">Hello!</span>
+          <span class="text-sage">Hello!</span>
           I'm Raoul Wograndl.
         </h1>
       </div>
     </div>
 
-    <section class="flex justify-center bg-neutral-100 py-16">
-      <div class="max-w-6xl px-6">
-        <h2 class="font-rubik text-4xl text-neutral-900">Work</h2>
-        <span class="text-neutral-500">Arbeit</span>
+    <section class="bg-light-gray flex justify-center py-16">
+      <div class="max-w-6xl px-6 sm:px-12">
+        <h2 class="font-rubik text-4xl text-neutral-900">Projects</h2>
+        <span class="text-neutral-500">Projekte</span>
 
-        <p class="mt-8">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-          cumque ex exercitationem explicabo ipsam ipsum magni recusandae sed
-          voluptate. Deleniti fugiat fugit iste mollitia pariatur placeat
-          provident quasi qui quibusdam? Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Accusamus cumque ex exercitationem explicabo ipsam
-          ipsum magni recusandae sed voluptate. Deleniti fugiat fugit iste
-          mollitia pariatur placeat provident quasi qui quibusdam? Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Accusamus cumque ex
-          exercitationem explicabo ipsam ipsum magni recusandae sed voluptate.
-          Deleniti fugiat fugit iste mollitia pariatur placeat provident quasi
-          qui quibusdam? Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Accusamus cumque ex exercitationem explicabo ipsam ipsum magni
-          recusandae sed voluptate. Deleniti fugiat fugit iste mollitia pariatur
-          placeat provident quasi qui quibusdam?
-        </p>
+        <div class="gric-cols-1 mt-8 grid gap-6 sm:grid-cols-2 sm:gap-10">
+          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
+            <div class="flex items-center justify-between text-lg">
+              <p class="font-rubik text-neutral-500">01</p>
+              <svg
+                class="text-neutral-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 7h10v10M7 17L17 7"></path></svg
+              >
+            </div>
+            <h3 class="font-rubik text-xl font-semibold">
+              This is my first project.
+            </h3>
+            <p class="text-neutral-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
+              quidem quo quos reiciendis tempora tempore temporibus? At commodi
+              eligendi modi obcaecati veniam?
+            </p>
+          </section>
+
+          <div class="w-full border-t border-neutral-300 sm:hidden"></div>
+
+          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
+            <div class="flex items-center justify-between text-lg">
+              <p class="font-rubik text-neutral-500">02</p>
+              <svg
+                class="text-neutral-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 7h10v10M7 17L17 7"></path></svg
+              >
+            </div>
+            <h3 class="font-rubik text-xl font-semibold">
+              This is my second project.
+            </h3>
+            <p class="text-neutral-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
+              quidem quo quos reiciendis tempora tempore temporibus? At commodi
+              eligendi modi obcaecati veniam?
+            </p>
+          </section>
+
+          <div class="w-full border-t border-neutral-300 sm:hidden"></div>
+
+          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
+            <div class="flex items-center justify-between text-lg">
+              <p class="font-rubik text-neutral-500">03</p>
+              <svg
+                class="text-neutral-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 7h10v10M7 17L17 7"></path></svg
+              >
+            </div>
+            <h3 class="font-rubik text-xl font-semibold">
+              This is my third project.
+            </h3>
+            <p class="text-neutral-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
+              quidem quo quos reiciendis tempora tempore temporibus? At commodi
+              eligendi modi obcaecati veniam?
+            </p>
+          </section>
+
+          <div class="w-full border-t border-neutral-300 sm:hidden"></div>
+
+          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
+            <div class="flex items-center justify-between text-lg">
+              <p class="font-rubik text-neutral-500">04</p>
+              <svg
+                class="text-neutral-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 7h10v10M7 17L17 7"></path></svg
+              >
+            </div>
+            <h3 class="font-rubik text-xl font-semibold">
+              This is my fourth project.
+            </h3>
+            <p class="text-neutral-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
+              quidem quo quos reiciendis tempora tempore temporibus? At commodi
+              eligendi modi obcaecati veniam?
+            </p>
+          </section>
+        </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-6 py-16">
+    <section class="mx-auto max-w-6xl px-6 py-16 sm:px-12" id="about">
       <h2 class="font-rubik text-4xl text-neutral-900">About me</h2>
       <span class="text-neutral-500">Über mich</span>
 
       <p class="mt-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-        cumque ex exercitationem explicabo ipsam ipsum magni recusandae sed
-        voluptate. Deleniti fugiat fugit iste mollitia pariatur placeat
-        provident quasi qui quibusdam? Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Accusamus cumque ex exercitationem explicabo ipsam
-        ipsum magni recusandae sed voluptate. Deleniti fugiat fugit iste
-        mollitia pariatur placeat provident quasi qui quibusdam? Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit. Accusamus cumque ex
-        exercitationem explicabo ipsam ipsum magni recusandae sed voluptate.
-        Deleniti fugiat fugit iste mollitia pariatur placeat provident quasi qui
-        quibusdam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusamus cumque ex exercitationem explicabo ipsam ipsum magni
-        recusandae sed voluptate. Deleniti fugiat fugit iste mollitia pariatur
-        placeat provident quasi qui quibusdam?
+        I am a software engineering student and aspiring full-stack developer
+        specializing in <span class="text-sage font-bold">PHP</span>, <span
+          class="text-sage font-bold">Laravel</span
+        >, and <span class="text-sage font-bold">Vue.js</span>. I dedicate my
+        free time to building modern web applications with a strict emphasis on
+        clean architecture and industry best practices. My goal is to bridge the
+        gap between complex back-end logic and intuitive user experiences while
+        honing my technical skills.
       </p>
-
-      <h2 class="font-rubik mt-16 text-4xl text-neutral-900">Resume</h2>
-      <span class="text-neutral-500">Lebenslauf</span>
-
-      <p class="mt-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-        cumque ex exercitationem explicabo ipsam ipsum magni recusandae sed
-        voluptate. Deleniti fugiat fugit iste mollitia pariatur placeat
-        provident quasi qui quibusdam? Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Accusamus cumque ex exercitationem explicabo ipsam
-        ipsum magni recusandae sed voluptate. Deleniti fugiat fugit iste
-        mollitia pariatur placeat provident quasi qui quibusdam? Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit. Accusamus cumque ex
-        exercitationem explicabo ipsam ipsum magni recusandae sed voluptate.
-        Deleniti fugiat fugit iste mollitia pariatur placeat provident quasi qui
-        quibusdam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusamus cumque ex exercitationem explicabo ipsam ipsum magni
-        recusandae sed voluptate. Deleniti fugiat fugit iste mollitia pariatur
-        placeat provident quasi qui quibusdam?
+      <p class="mt-4">
+        Outside of my student life, I'm a big believer in staying active and
+        feeding my own curiosity. When I'm not working on my latest project,
+        you'll find me at the gym, listening to new music or diving into a video
+        game. I find that physical activity helps me break out of the sometimes
+        stressful day-to-day while keeping my mind sharp, and exploring games
+        contributes to my ability of being a more creative problem solver.
       </p>
     </section>
 
+    <section class="bg-light-gray flex justify-center py-16" id="resume">
+      <div class="w-full max-w-6xl px-6 sm:px-12">
+        <h2 class="font-rubik text-4xl text-neutral-900">Resume</h2>
+        <span class="text-neutral-500">Lebenslauf</span>
+
+        <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <section>
+            <h3 class="font-rubik text-2xl text-neutral-900">Education</h3>
+            <span class="text-sm text-neutral-500">Ausbildung</span>
+            <div class="mt-4 space-y-4">
+              <div>
+                <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
+                  BSc in Computer Science @&nbsp;
+                  <a
+                    class="flex items-baseline hover:underline"
+                    href="https://www.technikum-wien.at/en/"
+                  >
+                    FHTW
+                    <svg
+                      class="text-neutral-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      ><path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 7h10v10M7 17L17 7"></path></svg
+                    >
+                  </a>
+                </p>
+                <span class="text-sm text-neutral-500">
+                  Sep, 2021 - Jun, 2024
+                </span>
+              </div>
+              <div>
+                <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
+                  MSc in Software Engineering @&nbsp;
+                  <a
+                    class="flex items-baseline hover:underline"
+                    href="https://www.tuwien.at/en/"
+                  >
+                    TU Wien
+                    <svg
+                      class="text-neutral-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      ><path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 7h10v10M7 17L17 7"></path></svg
+                    >
+                  </a>
+                </p>
+                <span class="text-sm text-neutral-500">
+                  Oct, 2024 - Present
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <div class="w-full border-t border-neutral-300 sm:hidden"></div>
+
+          <section>
+            <h3 class="font-rubik text-2xl text-neutral-900">Work</h3>
+            <span class="text-sm text-neutral-500">Arbeit</span>
+            <div class="mt-4 space-y-4">
+              <div>
+                <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
+                  Web Developer @&nbsp;
+                  <a
+                    class="flex items-baseline hover:underline"
+                    href="https://www.fms.at/?lang=en"
+                  >
+                    Austrosoft
+                    <svg
+                      class="text-neutral-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      ><path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 7h10v10M7 17L17 7"></path></svg
+                    >
+                  </a>
+                </p>
+                <span class="text-sm text-neutral-500">
+                  Jul, 2022 - Dec, 2024
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="mt-8 w-full border-t border-neutral-300"></div>
+
+        <div class="mt-8">
+          <h3 class="font-rubik text-2xl text-neutral-900">Skills</h3>
+          <span class="text-sm text-neutral-500">Fertigkeiten</span>
+          <div class="mt-4 flex flex-wrap gap-1 sm:gap-2">
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              JavaScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              TypeScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              PHP
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Laravel
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Vue
+            </span>
+
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              JavaScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              TypeScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              PHP
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Laravel
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Vue
+            </span>
+
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              JavaScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              TypeScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              PHP
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Laravel
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Vue
+            </span>
+
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              JavaScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              TypeScript
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              PHP
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Laravel
+            </span>
+            <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
+              Vue
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
-      class="bg-i-800 flex justify-center py-16 text-white"
-      style="background-color: rgb(34, 40, 40);"
+      class="bg-dark-gray flex justify-center py-16 text-white"
+      id="contact"
     >
-      <div class="max-w-6xl px-6">
+      <div class="w-full max-w-6xl px-6 sm:px-12">
         <h2 class="font-rubik text-4xl">Contact</h2>
         <span class="text-neutral-300">Kontakt</span>
 
-        <p class="mt-8">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-          cumque ex exercitationem explicabo ipsam ipsum magni recusandae sed
-          voluptate. Deleniti fugiat fugit iste mollitia pariatur placeat
-          provident quasi qui quibusdam? Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Accusamus cumque ex exercitationem explicabo ipsam
-          ipsum magni recusandae sed voluptate. Deleniti fugiat fugit iste
-          mollitia pariatur placeat provident quasi qui quibusdam? Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Accusamus cumque ex
-          exercitationem explicabo ipsam ipsum magni recusandae sed voluptate.
-          Deleniti fugiat fugit iste mollitia pariatur placeat provident quasi
-          qui quibusdam? Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Accusamus cumque ex exercitationem explicabo ipsam ipsum magni
-          recusandae sed voluptate. Deleniti fugiat fugit iste mollitia pariatur
-          placeat provident quasi qui quibusdam?
+        <p class="mt-8 text-lg text-neutral-200">
+          Feel free to send me an email at
+          <a
+            href="mailto:wograndl.raoul@gmail.com"
+            class="text-white underline"
+          >
+            wograndl.raoul@gmail.com
+          </a> or hit me up on my socials!
         </p>
       </div>
     </section>

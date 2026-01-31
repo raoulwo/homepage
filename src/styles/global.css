@@ -3,4 +3,9 @@
 @theme {
     --font-rubik: "Rubik", sans-serif;
     --font-assistant: "Assistant", sans-serif;
+
+    --color-sage: #78866b;
+    --color-mint: #a3b18a;
+    --color-light-gray: #f5f7f7;
+    --color-dark-gray: #222828;
 }
