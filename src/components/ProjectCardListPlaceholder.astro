@@ -1,0 +1,22 @@
+---
+import FolderIcon from "./FolderIcon.astro";
+import ArrowRightIcon from "./ArrowRightIcon.astro";
+---
+
+<div class="mt-16 flex flex-col items-center justify-center">
+  <div class="bg-sage rounded-xl p-2 text-white">
+    <FolderIcon />
+  </div>
+  <h3 class="font-rubik mt-4 text-2xl">No Projects Yet</h3>
+  <p class="mt-2 max-w-sm text-center text-lg text-neutral-500">
+    Looks like I haven't created anything noteworthy yet. Take a look at my
+    repositories instead!
+  </p>
+  <a
+    href="https://github.com/raoulwo?tab=repositories"
+    class="mt-8 flex items-center space-x-1 rounded-xl border border-neutral-200 bg-white px-3 py-2"
+  >
+    <span>View Repositories</span>
+    <ArrowRightIcon />
+  </a>
+</div>

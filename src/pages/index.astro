@@ -3,33 +3,13 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Badge from "../components/Badge.astro";
 import Divider from "../components/Divider.astro";
-import ProjectCard from "../components/ProjectCard.astro";
 import type { Project } from "../types/project.ts";
 import type { Resume } from "../types/resume.ts";
 import ResumeList from "../components/ResumeList.astro";
+import ProjectCardList from "../components/ProjectCardList.astro";
+import ProjectCardListPlaceholder from "../components/ProjectCardListPlaceholder.astro";
 
-const projects: Project[] = [
-  {
-    title: "My first project",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
-  },
-  {
-    title: "My second project",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
-  },
-  {
-    title: "My third project",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
-  },
-  {
-    title: "My fourth project",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
-  },
-];
+const projects: Project[] = [];
 
 const education: Resume = {
   title: "Education",
@@ -108,20 +88,17 @@ const skills = [
     </section>
 
     <section class="bg-light-gray flex justify-center py-16">
-      <div class="max-w-6xl px-6 sm:px-12">
+      <div class="w-full max-w-6xl px-6 sm:px-12">
         <h2 class="font-rubik text-4xl text-neutral-900">Projects</h2>
         <span class="text-neutral-500">Projekte</span>
 
-        <div class="gric-cols-1 mt-8 grid gap-6 sm:grid-cols-2 sm:gap-10">
-          {
-            projects.map((project: Project, index: number) => (
-              <>
-                <ProjectCard project={project} position={index + 1} />
-                <Divider />
-              </>
-            ))
-          }
-        </div>
+        {
+          projects.length > 0 ? (
+            <ProjectCardList projects={projects} />
+          ) : (
+            <ProjectCardListPlaceholder />
+          )
+        }
       </div>
     </section>
 
@@ -160,41 +137,6 @@ const skills = [
           <Divider />
 
           <ResumeList resume={work} />
-
-          <!--<section>
-            <h3 class="font-rubik text-2xl text-neutral-900">Work</h3>
-            <span class="text-sm text-neutral-500">Arbeit</span>
-            <div class="mt-4 space-y-4">
-              <div>
-                <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
-                  Web Developer @&nbsp;
-                  <a
-                    class="flex items-baseline hover:underline"
-                    href="https://www.fms.at/?lang=en"
-                  >
-                    Austrosoft
-                    <svg
-                      class="text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      ><path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7 7h10v10M7 17L17 7"></path></svg
-                    >
-                  </a>
-                </p>
-                <span class="text-sm text-neutral-500">
-                  Jul, 2022 - Dec, 2024
-                </span>
-              </div>
-            </div>
-          </section>-->
         </div>
 
         <Divider />

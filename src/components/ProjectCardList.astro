@@ -1,0 +1,18 @@
+---
+import Divider from "./Divider.astro";
+import ProjectCard from "./ProjectCard.astro";
+import type { Project } from "../types/project.ts";
+
+const { projects } = Astro.props;
+---
+
+<div class="gric-cols-1 mt-8 grid gap-6 sm:grid-cols-2 sm:gap-10">
+  {
+    projects.map((project: Project, index: number) => (
+      <>
+        <ProjectCard project={project} position={index + 1} />
+        <Divider />
+      </>
+    ))
+  }
+</div>
