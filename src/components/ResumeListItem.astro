@@ -1,17 +1,25 @@
 ---
-const { item } = Astro.props;
+const { item, position } = Astro.props;
+
+const delay = position * 100;
 ---
 
-<div>
+<div
+  class={`reveal translate-y-8 opacity-0 transition-all duration-400 delay-${delay}`}
+>
   <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
     {item.title} @&nbsp;
-    <a class="flex items-baseline hover:underline" href={item.link.href}>
-      {item.link.text}
+    <a class="group flex items-center" href={item.link.href}>
+      <span
+        class="underline transition-colors duration-100 ease-out group-hover:text-neutral-500"
+        >{item.link.text}</span
+      >
+
       <svg
-        class="text-neutral-400"
+        class="ml-0.5 text-neutral-400 transition-all duration-100 ease-out group-hover:rotate-45 group-hover:text-neutral-500"
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
       >
         <path

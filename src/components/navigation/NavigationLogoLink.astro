@@ -2,6 +2,9 @@
 const { logoLink } = Astro.props;
 ---
 
-<a href={logoLink.href} class="font-rubik -m-1.5 p-1.5 text-2xl lowercase">
+<a
+  href={logoLink.href}
+  class="font-rubik -m-1.5 p-1.5 text-2xl lowercase transition-all duration-100 ease-out hover:-translate-y-0.5"
+>
   {logoLink.text}
 </a>

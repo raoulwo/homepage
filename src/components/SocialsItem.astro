@@ -3,6 +3,9 @@ const { social } = Astro.props;
 const { href, icon: Component } = social;
 ---
 
-<a href={href} class="text-neutral-400 hover:text-white">
+<a
+  href={href}
+  class="text-neutral-400 transition-all duration-100 ease-out hover:-translate-y-0.5 hover:text-white"
+>
   {Component && <Component />}
 </a>

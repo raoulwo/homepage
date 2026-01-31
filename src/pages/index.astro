@@ -69,20 +69,30 @@ const skills = [
 
 <BaseLayout>
   <div class="mx-auto w-full bg-white">
-    <section class="mx-auto flex max-w-6xl justify-center px-6 sm:px-12">
+    <section
+      class="mx-auto flex h-screen max-w-6xl justify-center px-6 sm:px-12"
+    >
       <div
         class="flex flex-col items-center gap-12 py-12 lg:flex-row-reverse lg:justify-evenly lg:py-24"
       >
         <img
           src="cropped_image.png"
           alt="A picture of myself"
-          class="mx-auto h-auto w-full max-w-xs lg:mx-0 lg:mb-0 lg:max-w-md"
+          class="reveal mx-auto h-auto w-full max-w-xs translate-y-8 opacity-0 transition-all duration-400 ease-out lg:mx-0 lg:mb-0 lg:max-w-md lg:delay-400"
         />
         <h1
-          class="font-rubik text-center text-5xl font-semibold sm:text-6xl lg:text-left"
+          class="font-rubik flex flex-col text-center text-5xl font-semibold sm:text-6xl lg:text-left"
         >
-          <span class="text-sage">Hello!</span>
-          I'm Raoul Wograndl.
+          <span
+            class="text-sage reveal translate-y-8 opacity-0 transition-all delay-200 duration-400 ease-out lg:delay-0"
+          >
+            Nice to meet you!
+          </span>
+          <span
+            class="reveal translate-y-8 opacity-0 transition-all delay-400 duration-400 ease-out lg:delay-200"
+          >
+            I'm Raoul.
+          </span>
         </h1>
       </div>
     </section>
@@ -106,7 +116,9 @@ const skills = [
       <h2 class="font-rubik text-4xl text-neutral-900">About me</h2>
       <span class="text-neutral-500">Über mich</span>
 
-      <p class="mt-8">
+      <p
+        class="reveal mt-8 translate-y-8 opacity-0 transition-all delay-100 duration-400 ease-out"
+      >
         I am a software engineering student and aspiring full-stack developer
         specializing in <span class="text-sage font-bold">PHP</span>, <span
           class="text-sage font-bold">Laravel</span
@@ -116,7 +128,9 @@ const skills = [
         gap between complex back-end logic and intuitive user experiences while
         honing my technical skills.
       </p>
-      <p class="mt-4">
+      <p
+        class="reveal mt-4 translate-y-8 opacity-0 transition-all delay-200 duration-400 ease-out"
+      >
         Outside of my student life, I'm a big believer in staying active and
         feeding my own curiosity. When I'm not working on my latest project,
         you'll find me at the gym, listening to new music or diving into a video

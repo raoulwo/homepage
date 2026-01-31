@@ -9,6 +9,10 @@ const { resume } = Astro.props;
   <h3 class="font-rubik text-2xl text-neutral-900">{resume.title}</h3>
   <span class="text-sm text-neutral-500">{resume.subtitle}</span>
   <div class="mt-4 space-y-4">
-    {resume.items.map((item: ResumeItem) => <ResumeListItem item={item} />)}
+    {
+      resume.items.map((item: ResumeItem, index: number) => (
+        <ResumeListItem item={item} position={index + 1} />
+      ))
+    }
   </div>
 </section>

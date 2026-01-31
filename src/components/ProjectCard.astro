@@ -10,29 +10,37 @@ const pad = (num: number, width: number = 2): string => {
 
   return result;
 };
+
+const delay = position * 100;
 ---
 
-<section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
-  <div class="flex items-center justify-between text-lg">
-    <p class="font-rubik text-neutral-500">{pad(position)}</p>
-    <svg
-      class="text-neutral-400"
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-    >
-      <path
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M7 7h10v10M7 17L17 7"
+<section
+  class={`opacity-0 reveal transition-all translate-y-8 duration-400 delay-${delay}`}
+>
+  <div
+    class="border-light-gray group cursor-pointer space-y-2 rounded-2xl border transition-all duration-300 hover:-translate-y-0.5 hover:border-neutral-100 lg:p-8 lg:hover:bg-white"
+  >
+    <div class="flex items-center justify-between text-lg">
+      <p class="font-rubik text-neutral-500">{pad(position)}</p>
+      <svg
+        class="text-neutral-400 transition-colors duration-300 group-hover:text-neutral-500"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
       >
-      </path>
-    </svg>
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 7h10v10M7 17L17 7"
+        >
+        </path>
+      </svg>
+    </div>
+    <h3 class="font-rubik text-xl font-semibold">{project.title}</h3>
+    <p class="text-neutral-600">{project.description}</p>
   </div>
-  <h3 class="font-rubik text-xl font-semibold">{project.title}</h3>
-  <p class="text-neutral-600">{project.description}</p>
 </section>

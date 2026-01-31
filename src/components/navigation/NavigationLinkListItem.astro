@@ -2,4 +2,10 @@
 const { link } = Astro.props;
 ---
 
-<a href={link.href} class="font-semibold hover:underline">{link.text}</a>
+<a href={link.href} class="group relative font-semibold">
+  {link.text}
+  <span
+    class="absolute bottom-0 left-1/2 h-[1px] w-0 bg-neutral-900 transition-all duration-300 ease-out group-hover:left-0 group-hover:w-full"
+  >
+  </span>
+</a>
