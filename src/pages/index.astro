@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Badge from "../components/Badge.astro";
 
 const skills = [
   "HTML",
@@ -307,13 +308,7 @@ const skills = [
           <h3 class="font-rubik text-2xl text-neutral-900">Skills</h3>
           <span class="text-sm text-neutral-500">Fertigkeiten</span>
           <div class="mt-4 flex flex-wrap gap-1 sm:gap-2">
-            {
-              skills.map((skill) => (
-                <span class="bg-sage rounded-lg px-2 py-1 text-sm text-white">
-                  {skill}
-                </span>
-              ))
-            }
+            {skills.map((skill) => <Badge>{skill}</Badge>)}
           </div>
         </div>
       </div>
