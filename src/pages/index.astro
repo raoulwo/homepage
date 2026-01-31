@@ -3,6 +3,71 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Badge from "../components/Badge.astro";
 import Divider from "../components/Divider.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import type { Project } from "../types/project.ts";
+import type { Resume } from "../types/resume.ts";
+import ResumeList from "../components/ResumeList.astro";
+
+const projects: Project[] = [
+  {
+    title: "My first project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
+  },
+  {
+    title: "My second project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
+  },
+  {
+    title: "My third project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
+  },
+  {
+    title: "My fourth project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores, at corporis dolor ducimus excepturi, magnam quaerat quidem quo quos reiciendis tempora tempore temporibus? At commodi eligendi modi obcaecati veniam?",
+  },
+];
+
+const education: Resume = {
+  title: "Education",
+  subtitle: "Ausbilding",
+  items: [
+    {
+      title: "BSc in Computer Science",
+      duration: "Sep, 2021 - Jun, 2024",
+      link: {
+        text: "FHTW",
+        href: "https://www.technikum-wien.at/en/",
+      },
+    },
+    {
+      title: "MSc in Software Engineering",
+      duration: "Oct, 2024 - Present",
+      link: {
+        text: "TU Wien",
+        href: "https://www.tuwien.at/en/",
+      },
+    },
+  ],
+};
+
+const work: Resume = {
+  title: "Work",
+  subtitle: "Arbeit",
+  items: [
+    {
+      title: "Web Developer",
+      duration: "Jul, 2022 - Dec, 2024",
+      link: {
+        text: "Austrosoft",
+        href: "https://www.fms.at/?lang=en",
+      },
+    },
+  ],
+};
 
 const skills = [
   "HTML",
@@ -24,7 +89,7 @@ const skills = [
 
 <BaseLayout>
   <div class="bg-white">
-    <div class="mx-auto flex max-w-6xl justify-center px-6 sm:px-12">
+    <section class="mx-auto flex max-w-6xl justify-center px-6 sm:px-12">
       <div
         class="flex flex-col items-center gap-12 py-12 lg:flex-row-reverse lg:justify-evenly lg:py-24"
       >
@@ -40,7 +105,7 @@ const skills = [
           I'm Raoul Wograndl.
         </h1>
       </div>
-    </div>
+    </section>
 
     <section class="bg-light-gray flex justify-center py-16">
       <div class="max-w-6xl px-6 sm:px-12">
@@ -48,129 +113,12 @@ const skills = [
         <span class="text-neutral-500">Projekte</span>
 
         <div class="gric-cols-1 mt-8 grid gap-6 sm:grid-cols-2 sm:gap-10">
-          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
-            <div class="flex items-center justify-between text-lg">
-              <p class="font-rubik text-neutral-500">01</p>
-              <svg
-                class="text-neutral-400"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                ><path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M7 7h10v10M7 17L17 7"></path></svg
-              >
-            </div>
-            <h3 class="font-rubik text-xl font-semibold">
-              This is my first project.
-            </h3>
-            <p class="text-neutral-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
-              quidem quo quos reiciendis tempora tempore temporibus? At commodi
-              eligendi modi obcaecati veniam?
-            </p>
-          </section>
-
-          <Divider />
-
-          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
-            <div class="flex items-center justify-between text-lg">
-              <p class="font-rubik text-neutral-500">02</p>
-              <svg
-                class="text-neutral-400"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                ><path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M7 7h10v10M7 17L17 7"></path></svg
-              >
-            </div>
-            <h3 class="font-rubik text-xl font-semibold">
-              This is my second project.
-            </h3>
-            <p class="text-neutral-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
-              quidem quo quos reiciendis tempora tempore temporibus? At commodi
-              eligendi modi obcaecati veniam?
-            </p>
-          </section>
-
-          <Divider />
-
-          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
-            <div class="flex items-center justify-between text-lg">
-              <p class="font-rubik text-neutral-500">03</p>
-              <svg
-                class="text-neutral-400"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                ><path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M7 7h10v10M7 17L17 7"></path></svg
-              >
-            </div>
-            <h3 class="font-rubik text-xl font-semibold">
-              This is my third project.
-            </h3>
-            <p class="text-neutral-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
-              quidem quo quos reiciendis tempora tempore temporibus? At commodi
-              eligendi modi obcaecati veniam?
-            </p>
-          </section>
-
-          <Divider />
-
-          <section class="space-y-2 rounded-2xl lg:p-8 lg:hover:bg-white">
-            <div class="flex items-center justify-between text-lg">
-              <p class="font-rubik text-neutral-500">04</p>
-              <svg
-                class="text-neutral-400"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                ><path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M7 7h10v10M7 17L17 7"></path></svg
-              >
-            </div>
-            <h3 class="font-rubik text-xl font-semibold">
-              This is my fourth project.
-            </h3>
-            <p class="text-neutral-600">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              asperiores, at corporis dolor ducimus excepturi, magnam quaerat
-              quidem quo quos reiciendis tempora tempore temporibus? At commodi
-              eligendi modi obcaecati veniam?
-            </p>
-          </section>
-
-          <Divider />
+          {
+            projects.map((project: Project, index: number) => (
+              <ProjectCard project={project} position={index + 1} />
+              <Divider />
+            ))
+          }
         </div>
       </div>
     </section>
@@ -205,72 +153,13 @@ const skills = [
         <span class="text-neutral-500">Lebenslauf</span>
 
         <div class="my-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-          <section>
-            <h3 class="font-rubik text-2xl text-neutral-900">Education</h3>
-            <span class="text-sm text-neutral-500">Ausbildung</span>
-            <div class="mt-4 space-y-4">
-              <div>
-                <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
-                  BSc in Computer Science @&nbsp;
-                  <a
-                    class="flex items-baseline hover:underline"
-                    href="https://www.technikum-wien.at/en/"
-                  >
-                    FHTW
-                    <svg
-                      class="text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      ><path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7 7h10v10M7 17L17 7"></path></svg
-                    >
-                  </a>
-                </p>
-                <span class="text-sm text-neutral-500">
-                  Sep, 2021 - Jun, 2024
-                </span>
-              </div>
-              <div>
-                <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
-                  MSc in Software Engineering @&nbsp;
-                  <a
-                    class="flex items-baseline hover:underline"
-                    href="https://www.tuwien.at/en/"
-                  >
-                    TU Wien
-                    <svg
-                      class="text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      ><path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7 7h10v10M7 17L17 7"></path></svg
-                    >
-                  </a>
-                </p>
-                <span class="text-sm text-neutral-500">
-                  Oct, 2024 - Present
-                </span>
-              </div>
-            </div>
-          </section>
+          <ResumeList resume={education} />
 
           <Divider />
 
-          <section>
+          <ResumeList resume={work} />
+
+          <!--<section>
             <h3 class="font-rubik text-2xl text-neutral-900">Work</h3>
             <span class="text-sm text-neutral-500">Arbeit</span>
             <div class="mt-4 space-y-4">
@@ -303,7 +192,7 @@ const skills = [
                 </span>
               </div>
             </div>
-          </section>
+          </section>-->
         </div>
 
         <Divider />

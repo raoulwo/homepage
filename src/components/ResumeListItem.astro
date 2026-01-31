@@ -1,0 +1,30 @@
+---
+const { item } = Astro.props;
+---
+
+<div>
+  <p class="flex flex-wrap text-lg text-neutral-900 sm:text-xl">
+    {item.title} @&nbsp;
+    <a class="flex items-baseline hover:underline" href={item.link.href}>
+      {item.link.text}
+      <svg
+        class="text-neutral-400"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 7h10v10M7 17L17 7"
+        >
+        </path>
+      </svg>
+    </a>
+  </p>
+  <span class="text-sm text-neutral-500">{item.duration}</span>
+</div>

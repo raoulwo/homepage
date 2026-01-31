@@ -1,0 +1,14 @@
+---
+import ResumeListItem from "./ResumeListItem.astro";
+import type { ResumeItem } from "../types/resume.ts";
+
+const { resume } = Astro.props;
+---
+
+<section>
+  <h3 class="font-rubik text-2xl text-neutral-900">{resume.title}</h3>
+  <span class="text-sm text-neutral-500">{resume.subtitle}</span>
+  <div class="mt-4 space-y-4">
+    {resume.items.map((item: ResumeItem) => <ResumeListItem item={item} />)}
+  </div>
+</section>
