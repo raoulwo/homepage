@@ -1,0 +1,26 @@
+---
+import SocialsItem from "./SocialsItem.astro";
+import GitHubIcon from "./GitHubIcon.astro";
+import TwitterIcon from "./TwitterIcon.astro";
+import LinkedInIcon from "./LinkedInIcon.astro";
+import type { SocialLink } from "../types/social-link.ts";
+
+const socials: SocialLink[] = [
+  {
+    href: "https://github.com/raoulwo",
+    icon: GitHubIcon,
+  },
+  {
+    href: "https://x.com/raoulwo",
+    icon: TwitterIcon,
+  },
+  {
+    href: "https://www.linkedin.com/in/raoul-wograndl-3a4ba0230",
+    icon: LinkedInIcon,
+  },
+];
+---
+
+<div class="flex justify-center gap-x-6 sm:order-2">
+  {socials.map((social) => <SocialsItem social={social} />)}
+</div>
