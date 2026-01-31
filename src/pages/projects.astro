@@ -1,10 +1,26 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import type { Project } from "../types/project.ts";
+import ProjectCardListPlaceholder from "../components/ProjectCardListPlaceholder.astro";
+import ProjectCardList from "../components/ProjectCardList.astro";
+
+const projects: Project[] = [];
 ---
 
 <BaseLayout>
-  <div class="mx-auto max-w-6xl px-6 sm:px-12">
-    <h1>Under construction</h1>
-  </div>
+  <section class="bg-light-gray mx-auto flex w-full justify-center py-16">
+    <div class="w-full max-w-6xl px-6 sm:px-12">
+      <h2 class="font-rubik text-4xl text-neutral-900">Projects</h2>
+      <span class="text-neutral-500">Projekte</span>
+
+      {
+        projects.length > 0 ? (
+          <ProjectCardList projects={projects} />
+        ) : (
+          <ProjectCardListPlaceholder />
+        )
+      }
+    </div>
+  </section>
 </BaseLayout>
