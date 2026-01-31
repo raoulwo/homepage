@@ -1,0 +1,27 @@
+---
+import NavigationLogoLink from "./NavigationLogoLink.astro";
+import NavigationCloseMenuButton from "./NavigationCloseMenuButton.astro";
+import NavigationMobileMenuLinkList from "./NavigationMobileMenuLinkList.astro";
+
+const { logoLink, links } = Astro.props;
+---
+
+<el-dialog>
+  <dialog id="mobile-menu" class="backdrop:bg-transparent md:hidden">
+    <div tabindex="0" class="fixed inset-0 focus:outline-none">
+      <el-dialog-panel
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-4 sm:px-12 sm:ring-1 sm:ring-gray-900/10 md:max-w-md"
+      >
+        <div class="flex items-center justify-between">
+          <NavigationLogoLink logoLink={logoLink} />
+          <NavigationCloseMenuButton />
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <NavigationMobileMenuLinkList links={links} />
+          </div>
+        </div>
+      </el-dialog-panel>
+    </div>
+  </dialog>
+</el-dialog>

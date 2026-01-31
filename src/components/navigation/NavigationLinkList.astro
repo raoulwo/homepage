@@ -1,0 +1,10 @@
+---
+import NavigationLinkListItem from "./NavigationLinkListItem.astro";
+import type { Link } from "../../types/resume.ts";
+
+const { links } = Astro.props;
+---
+
+<div class="hidden md:flex md:gap-x-8">
+  {links.map((link: Link) => <NavigationLinkListItem link={link} />)}
+</div>

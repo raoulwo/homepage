@@ -1,0 +1,10 @@
+---
+import NavigationMobileMenuLinkListItem from "./NavigationMobileMenuLinkListItem.astro";
+import type { Link } from "../../types/resume.ts";
+
+const { links } = Astro.props;
+---
+
+<div class="space-y-2 py-6">
+  {links.map((link: Link) => <NavigationMobileMenuLinkListItem link={link} />)}
+</div>

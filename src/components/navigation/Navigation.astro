@@ -1,0 +1,37 @@
+---
+import "../../styles/global.css";
+import NavigationLogoLink from "./NavigationLogoLink.astro";
+import NavigationOpenMenuButton from "./NavigationOpenMenuButton.astro";
+import NavigationMobileMenu from "./NavigationMobileMenu.astro";
+import NavigationLinkList from "./NavigationLinkList.astro";
+import type { Link } from "../../types/resume.ts";
+
+const logoLink: Link = {
+  text: "raoulwo",
+  href: "/",
+};
+
+const links: Link[] = [
+  {
+    text: "Home",
+    href: "/",
+  },
+  {
+    text: "Projects",
+    href: "/projects",
+  },
+];
+---
+
+<header class="sticky top-0 z-10 bg-white">
+  <nav
+    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-12"
+  >
+    <NavigationLogoLink logoLink={logoLink} />
+    <div class="flex md:hidden">
+      <NavigationOpenMenuButton />
+    </div>
+    <NavigationLinkList links={links} />
+  </nav>
+  <NavigationMobileMenu logoLink={logoLink} links={links} />
+</header>
